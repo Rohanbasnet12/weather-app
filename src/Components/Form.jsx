@@ -4,9 +4,13 @@ const Form = () => {
   return (
     <div>
       <form>
-        <div className="input-box">
-          <i className="fa-solid fa-location-pin"></i>
-          <input type="text" />
+        <div className="input-box flex gap-2 items-center justify-between border p-2 rounded-md">
+          <i className="fa-solid fa-location-dot"></i>
+          <input
+            type="text"
+            className="w-full bg-transparent outline-none text-black placeholder-zinc-900"
+            placeholder="Location"
+          />
           <button type="submit">
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
