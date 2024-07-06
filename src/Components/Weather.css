@@ -1,0 +1,25 @@
+/* Responsive layout */
+
+@media (max-width: 1200px) {
+    #Weather-container {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 800px) {
+    #Weather-container {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #Weather-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 500px) {
+    #Weather-container {
+        width: 80vw;
+    }
+}
