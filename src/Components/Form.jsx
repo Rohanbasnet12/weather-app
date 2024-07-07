@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const Form = ({ setData }) => {
+const Form = ({ setData, setLoading }) => {
   const [location, setLocation] = useState("");
 
   const apiKey = "c88c80a6d0ca365c7ef9102ec78af796";
@@ -9,15 +9,24 @@ const Form = ({ setData }) => {
 
   const searchLocation = (event) => {
     event.preventDefault();
+    setLoading(true);
     try {
-      axios.get(url).then((response) => {
-        setData(response.data);
-        console.log(response.data);
-      });
+      axios
+        .get(url)
+        .then((response) => {
+          setData(response.data);
+          setLoading(false);
+          console.log(response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+          setLoading(false);
+        });
 
       setLocation("");
     } catch (error) {
-      console.log(error.message());
+      console.error(error);
+      setLoading(false);
     }
   };
 
