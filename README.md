@@ -14,7 +14,7 @@ FormiMate a simple Form developed using reactjs. formiMate simplifies form handl
 
 ## Introduction
 
-![Weather app Background](public/images/weather.png)
+![Weather app Background](public/Images/weather.png)
 
 
 Our Weather App is a sleek and intuitive application designed using React, providing users with real-time weather information. The app leverages the OpenWeatherMap API to fetch current weather data for any specified location, ensuring accurate and up-to-date information. 
