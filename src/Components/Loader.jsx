@@ -41,7 +41,7 @@ const Loader = () => {
         {rotateKeyframes}
         {prixClipFixKeyframes}
       </style>
-      <div style={loaderStyle} className="loader">
+      <div style={loaderStyle} className="loader m-auto pb-4">
         <div style={loaderBeforeStyle}></div>
       </div>
     </div>

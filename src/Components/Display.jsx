@@ -1,14 +1,31 @@
 import React from "react";
 import Cloudy from "../images/cloudy-day-3.svg";
+import Rainy from "../images/rainy-7.svg";
+import Clear from "../images/cloudy-day-3.svg";
+import Snow from "../images/snowy-6.svg";
+import Thunderstorm from "../images/thunder.svg";
+import Mist from "../images/cloudy-night-3.svg";
 import Loader from "./Loader";
 
 const Display = ({ data, loading }) => {
   const renderWeatherIcon = (description) => {
     switch (description) {
+      case "Clear":
+        return <img src={Clear} alt="Clear Cloudy image" />;
       case "Clouds":
         return <img src={Cloudy} alt="Cloudy image" />;
+      case "Rain":
+        return <img src={Rainy} alt="Rainy image" />;
+      case "Drizzle":
+        return <img src={Rainy} alt="Rainy image" />;
+      case "Snow":
+        return <img src={Snow} alt="Snowy image" />;
+      case "Thunderstorm":
+        return <img src={Thunderstorm} alt="Thunderstorm image" />;
+      case "Mist":
+        return <img src={Mist} alt="Mist image" />;
       default:
-        return null; // Return a default icon or null
+        return <img src={Clear} alt="Clear Cloudy image" />; // Return a default icon
     }
   };
 
